@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <style>
+      body {
+        background-color: rgb(188, 252, 239);
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+        padding: 30px;
+      }
+      h2 {
+        color: rgb(54, 41, 247);
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        padding: 5px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      label {
+        font-weight: normal;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+        width: 100%;
+        font-size: 1em;
+      }
+      .form-remember {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 5px;
+      }
+      button {
+        background-color: #1b81da;
+        color: rgb(250, 249, 249);
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid black;
+      }
+      button:hover {
+        background-color: #3f8fd5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Sign up</h2>
+      <form>
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" name="fname" id="fname" required autofocus />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" name="lname" id="lname" />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="email@domain"
+            pattern=".+@domain"
+            title="Email must include @domain"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password (min 6 characters)</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+            required
+            minlength="6"
+          />
+        </div>
+        <div class="form-remember">
+          <input type="checkbox" id="remember" name="remember" />
+          <label for="remember"><i>Remember me</i></label>
+        </div>
+        <button type="submit"><b>Sign up</b></button>
+      </form>
+    </div>
+  </body>
+</html>
